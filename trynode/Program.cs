@@ -23,6 +23,7 @@ namespace trynode
         int shnatl;
         int tz;
         string name;
+
         Node<grade> grades;
 
         public student(int myshnat , int mytz , string myname)
@@ -32,8 +33,15 @@ namespace trynode
             tz = mytz;
             name = myname;
             //
-            grade g = new grade(10, 15);
-            grades  = new Node<grade>(g,null);
+            Random myRandom = new Random();
+            int courses = myRandom.Next(4, 6);
+            for (int i = 0; i < courses; i++)
+            {
+                grade g = new grade(10, 15);
+                grades = new Node<grade>(g, null);
+                
+            }
+            
             
 
         }
